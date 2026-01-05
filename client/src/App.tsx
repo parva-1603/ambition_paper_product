@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { ChakraProvider, ColorModeScript, useColorMode } from '@chakra-ui/react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { AuthProvider } from './contexts/AuthContext';
@@ -25,7 +25,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProtectedRoute from './components/ProtectedRoute';
 
-// Create a client
 const queryClient = new QueryClient();
 
 function App() {
@@ -99,7 +98,7 @@ function App() {
                     }
                   />
 
-                  {/* 404 Route */}
+                  {/* 404 */}
                   <Route path="*" element={<NotFoundPage />} />
                 </Routes>
               </main>
